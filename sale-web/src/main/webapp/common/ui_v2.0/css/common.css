@@ -1,0 +1,59 @@
+@charset "utf-8";
+/**** CSS Document ****/
+/*
+ *通用CSS样式
+ * 全局CSS、插件默认CSS、CSS3相关内容
+ */
+* { margin: 0; padding: 0; }
+html {
+  margin: 0 auto; 
+  border: 0 none;
+  font-size: 12px; color: #15273C; 
+  font-family: 微软雅黑,宋体,Segoe UI,Arial,Century Gothic;
+}
+body { margin: 0; padding: 0; width: 100%; }
+select, input, radio, checkbox, textarea { 
+  font-size: 12px; color: #15273C; 
+  font-family: 微软雅黑,宋体,Segoe UI,Arial,Century Gothic; 
+}
+a, td{ font-size: 12px; }
+/*DIV默认居中*/
+div { margin: 0 auto; }
+th, td, div{ outline: none; }
+/** 重置列表元素 **/
+ul, ul li, ol { list-style: none; outline: none; }
+/** 超链接样式 a:visited{text-decoration: none; color: #666;} **/
+a { 
+  color: #004574;
+  text-decoration: none; outline: none;
+}
+a:hover {text-decoration: none; color: #FF5B01;}
+/** IMG样式 **/
+img { border: none; overflow: hidden; }
+/** 重置表格元素 **/
+table { border-collapse: collapse; border-spacing: 0; }
+td { display: table-cell;}
+textarea {vertical-align: top; text-align: left;}
+.fl { float: left; }
+.fr { float: right; }
+.clear { clear: both; }
+/*div塌陷 clearfix */
+.clearfix:after { clear: both; content: ""; display: block; }
+
+/* CSS3 元素 */
+html { word-wrap:break-word; text-overflow:ellipsis; text-shadow:none; }
+/* 重置 HTML5 元素 */
+article, aside, details, figcaption, figure, footer,header, hgroup, menu, nav, section,
+summary, time, mark, audio, video {
+    display: block; margin: 0; padding: 0;}
+mark { background: #ff0; }
+
+/*重置easyui元素*/
+.datagrid-pager.pagination table { width: auto; }
+form.form_detail input { border: 0; background-color: inherit;}
+form tr.odd { }
+form tr.form_tr_even { background-color: #eaf2ff; }
+form.form_detail tr.form_tr_even input { background-color: #eaf2ff;}
+.imgClass{
+	
+}

@@ -1,0 +1,12 @@
+ <script type="text/javascript" src="${resource!}/js/upload.js?1=1"></script>
+ <div id="upload_dialog" class="easyui-dialog add_dialog" style="width: 650px; height: 385px;" closed="true" buttons="#dlg-buttons">
+    	<div class="ftitle">文件上传</div>
+	    <form id="upload_form" class="ftitle_form form_table" method="post" enctype="multipart/form-data" novalidate>
+		   <div class="fitem fitem_odd">      
+		          <label style="vertical-align: top;">选择文件:</label><input type="file" name="clientFile" id="clientFile"/>
+	       </div>
+	    </form>
+	    <div id="edit-dlg-buttons">
+	      <a class="easyui-linkbutton" iconCls="icon-ok" onclick="uploadForm()" id="uploadbutton">上传</a> 
+	    </div>
+    </div>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+[#include "../include/taglibs.html"/]
+<!--[if IE 9 ]><html class="ie9"><![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>${sysname!}</title>
+
+	<!-- Vendor CSS -->
+	<link href="${resource!}/material_admin/vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
+	<link href="${resource!}/material_admin/vendors/bower_components/bootstrap-sweetalert/lib/sweet-alert.css" rel="stylesheet">
+	<link href="${resource!}/material_admin/vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+	<link href="${resource!}/material_admin/vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+
+	<!-- CSS -->
+	<link href="${resource!}/material_admin/css/app.min.1.css" rel="stylesheet">
+	<link href="${resource!}/material_admin/css/app.min.2.css" rel="stylesheet">
+</head>
+<body>
+<header id="header" class="clearfix" data-current-skin="blue">
+	<ul class="header-inner">
+		<li id="menu-trigger" data-trigger="#sidebar">
+			<div class="line-wrap">
+				<div class="line top"></div>
+				<div class="line center"></div>
+				<div class="line bottom"></div>
+			</div>
+		</li>
+
+		<li class="logo hidden-xs">
+			<a href="#" onclick="addTab('','主页','${ctx!}/center.htm')">销售管理平台</a>
+		</li>
+
+		<li class="pull-right">
+			<ul class="top-menu">
+				<li id="toggle-width">
+					<div class="toggle-switch">
+						<input id="tw-switch" type="checkbox" hidden="hidden">
+						<label for="tw-switch" class="ts-helper"></label>
+					</div>
+				</li>
+
+				<li class="dropdown">
+					<a data-toggle="dropdown" href=""><i class="tm-icon zmdi zmdi-more-vert"></i></a>
+					<ul class="dropdown-menu dm-icon pull-right">
+						<li class="skin-switch">
+							<span class="ss-skin bgm-lightblue" data-skin="lightblue"></span>
+							<span class="ss-skin bgm-bluegray" data-skin="bluegray"></span>
+							<span class="ss-skin bgm-cyan" data-skin="cyan"></span>
+							<span class="ss-skin bgm-teal" data-skin="teal"></span>
+							<span class="ss-skin bgm-orange" data-skin="orange"></span>
+							<span class="ss-skin bgm-blue" data-skin="blue"></span>
+						</li>
+						<li class="divider"></li>
+						<li>
+							<a data-action="fullscreen" href=""><i class="zmdi zmdi-fullscreen"></i> Toggle Fullscreen</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+	</ul>
+
+	<input id="resourcePath" value="${resource!}" type="hidden"/>
+	<input id="ctxPath" value="${ctx!}" type="hidden"/>
+
+</header>
+
+<section id="main">
+	<aside id="sidebar" class="sidebar c-overflow">
+		<div class="profile-menu">
+			<div class="profile-pic">
+				<ul class="main-menu">
+					<li>
+						<a href="#">欢迎你，${adminUserName}</a>
+					</li>
+					<li>
+						<a href="${ctx!}/logout.htm"><i class="zmdi zmdi-time-restore"></i> 退出系统</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="profile-info"></div>
+		</div>
+		<ul class="main-menu" id="menu">
+			<li>
+				<a href="#" onclick="addTab('','系统参数','${ctx!}/center.htm')"><i class="zmdi zmdi-home"></i>主页</a>
+			</li>
+		</ul>
+	</aside>
+
+	<section id="content">
+		<!--<div class="container">-->
+			<iframe width="100%" id='iframe' name='iframe' frameborder="0" src='${ctx!}/center.htm' onLoad="iFrameHeight()"></iframe>
+		<!--</div>-->
+	</section>
+</section>
+
+<footer id="footer">
+	[#include "bottom.html"/]
+</footer>
+
+<!-- Page Loader -->
+<div class="page-loader">
+	<div class="preloader pls-blue">
+		<svg class="pl-circular" viewBox="25 25 50 50">
+			<circle class="plc-path" cx="50" cy="50" r="20" />
+		</svg>
+
+		<p>Please wait...</p>
+	</div>
+</div>
+
+<!-- Javascript Libraries -->
+<script src="${resource!}/material_admin/vendors/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="${resource!}/material_admin/vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<script src="${resource!}/material_admin/vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="${resource!}/material_admin/vendors/bower_components/Waves/dist/waves.min.js"></script>
+<script src="${resource!}/material_admin/vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
+<script src="${resource!}/material_admin/vendors/bower_components/bootstrap-sweetalert/lib/sweet-alert.min.js"></script>
+
+<!-- Placeholder for IE9 -->
+<!--[if IE 9 ]>
+<![endif]-->
+<script src="${resource!}/material_admin/vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
+<script type="text/javascript" src="${resource!}/js/side.js"></script>
+
+<script src="${resource!}/material_admin/js/functions.js"></script>
+<script src="${resource!}/material_admin/js/public.js"></script>
+<script type="text/javascript" src="${resource!}/js/frame/main.js"></script>
+
+</body>
+</html>

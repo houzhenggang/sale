@@ -1,0 +1,49 @@
+@charset "utf-8";
+/**** CSS Document for User ****/
+
+/*用户角色管理样式 beging*/
+#role_manage {}
+#role_manage .role_list {
+  padding: 0 10px;
+  height: 22px; line-height: 22px; vertical-align: middle;
+  border: 1px solid #fff;
+  background: #fdfdfd;
+}
+#role_manage .role_list:hover {
+  background-color: #eaf2ff;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+}
+.role_list .role_list_l {
+  float: left; margin-top: 3px;
+  height: 18px; overflow: hidden;
+  text-align: center;
+}
+.role_list .role_list_l input[type=checkbox] {
+  margin: 0; padding: 0; 
+  width: 15px; height: 18px;
+}
+.role_list .role_list_c { margin-left: 20px; }
+#role_manage .role_mbtn { 
+  position: absolute; top: 140px; left: 360px;
+  width: 30px;
+}
+#role_manage .role_mbtn a{ 
+  color: #a1a1a1; font-weight: bold; font-size: 22px;
+  cursor: pointer;
+}
+#role_manage .role_mbtn a:hover{ 
+  color: #000; font-size: 24px;
+}
+#role_manage .role_sbtn {
+  padding-right: 5px;
+  width: auto !important;
+}
+.dp {
+  opacity: 0.5;
+  filter: alpha(opacity = 50);
+  background-color: #AACCFF;
+}
+.over { background: #fdfdfd; }
+/*用户角色管理样式 end*/

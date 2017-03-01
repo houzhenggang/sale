@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context privileged="true">
+    <Resource name="jdbc/wh" 
+              auth="Container"
+              type="javax.sql.DataSource"
+              maxActive="100"
+              minIdle="10"
+              maxWait="10000"
+              username="wh_dev"  
+              password="wh_dev"
+              driverClassName="com.mysql.jdbc.Driver"
+              url="jdbc:mysql://192.168.99.32:3306/wh_dev?useUnicode=true&amp;characterEncoding=utf8&amp;zeroDateTimeBehavior=convertToNull&amp;allowMultiQueries=true" 
+              />
+</Context>

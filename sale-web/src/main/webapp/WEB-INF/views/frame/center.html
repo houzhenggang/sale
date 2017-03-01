@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+[#include "../include/taglibs.html"/]
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>${sysname!}欢迎页面</title><!-- CSS -->
+    <link href="${resource!}/material_admin/css/app.min.1.css" rel="stylesheet">
+    <link href="${resource!}/material_admin/css/app.min.2.css" rel="stylesheet">
+
+    <style type="text/css">
+        body, table {
+            margin:0;
+            padding:0;
+            font:12px/15px Microsoft YaHei, sans-serif;
+            color: #555;
+        }
+        th, td {
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body style="visibility: visible;">
+<div class="container">
+
+    <div class="block-header">
+        <h2>主页</h2>
+        <ul class="actions">
+            <li>
+                <a class="icon-pop" href="">
+                    <i class="zmdi zmdi-refresh-alt"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6">
+            <!-- Recent Items -->
+            <div class="card">
+                <div class="card-header">
+                    <h2>待办任务 <small></small></h2>
+                </div>
+
+                <div class="card-body m-t-0">
+                    <table class="table table-inner table-vmiddle">
+                        <thead>
+                        <tr>
+                            <th>任务名称</th>
+                            <th>任务数量</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        [@backlog]
+                            [#list list as back]
+                                [#if (back.backlogList?? && back.backlogList?size>0)]
+                                    <tr>
+                                        <td class="f-500 c-cyan">${back.name!}</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    [#if back.backlogList??]
+                                        [#list back.backlogList as child]
+                                        <tr>
+                                            <td>${child.name!}</td>
+                                            <td class="f-500 c-red">${child.backLogCount!}</td>
+                                            <td>[#if child.url??]<a href="${child.url!}">去处理</a>[/#if]</td>
+                                        </tr>
+                                        [/#list]
+                                    [/#if]
+                                [#elseif back.backLogCount?? && back.backLogCount>0]
+                                    <tr>
+                                        <td>${back.name!}</td>
+                                        <td class="f-500 c-red">${back.backLogCount!}</td>
+                                        <td>[#if back.url??]<a href="${back.url!}">去处理</a>[/#if]</td>
+                                    </tr>
+                                [/#if]
+                            [/#list]
+                        [/@backlog]
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+</body>
+</html>

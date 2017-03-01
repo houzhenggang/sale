@@ -1,0 +1,91 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+	<display-name>tms test</display-name>
+
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath*:/applicationContext.xml</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>multiServerMode</param-name>
+		<param-value>false</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>resteasy.media.type.mappings</param-name>
+		<param-value>html:text/html,json:application/json,xml:application/xml
+		</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>resteasy.language.mappings</param-name>
+		<param-value>en:en-US,es:es,fr:fr</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>resteasy.async.job.service.enabled</param-name>
+		<param-value>true</param-value>
+	</context-param>
+
+	<!-- How many jobs results can be held in memory at once? -->
+	<context-param>
+		<param-name>resteasy.async.job.service.max.job.results</param-name>
+		<param-value>100</param-value>
+	</context-param>
+
+	<!-- Maximum wait time on a job when a client is querying for it -->
+	<context-param>
+		<param-name>resteasy.async.job.service.max.wait</param-name>
+		<param-value>300000</param-value>
+	</context-param>
+
+	<!-- Thread pool size of background threads that run the job -->
+	<context-param>
+		<param-name>resteasy.async.job.service.thread.pool.size</param-name>
+		<param-value>100</param-value>
+	</context-param>
+
+	<!-- Set the base path for the Job uris -->
+	<context-param>
+		<param-name>resteasy.async.job.service.base.path</param-name>
+		<param-value>/asynch/jobs</param-value>
+	</context-param>
+
+	<listener>
+		<listener-class>
+			org.jboss.resteasy.plugins.server.servlet.ResteasyBootstrap
+		</listener-class>
+	</listener>
+
+	<listener>
+		<listener-class>
+			org.jboss.resteasy.plugins.spring.SpringContextLoaderListener
+		</listener-class>
+	</listener>
+
+	<servlet>
+		<servlet-name>resteasy-servlet</servlet-name>
+		<servlet-class>
+			org.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher
+		</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>resteasy-servlet</servlet-name>
+		<url-pattern>/*</url-pattern>
+	</servlet-mapping>
+
+	<filter>
+		<filter-name>springRequestFilter</filter-name>
+		<filter-class>org.springframework.web.filter.RequestContextFilter
+		</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>springRequestFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+</web-app>

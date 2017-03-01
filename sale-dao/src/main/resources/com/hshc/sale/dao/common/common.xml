@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Common">
+
+	<!-- mysql分页 -->
+	<sql id="mysqlPageineSql">
+	 <if test="null!=orderCols and ''!=orderCols">
+			<if test="null==direction or ''==direction">
+				order by ${orderCols} desc
+			</if>
+			<if test="null!=direction and ''!=direction">
+				order by ${orderCols} ${direction}
+			</if>
+	  </if>
+	  <if test="null==orderCols or ''==orderCols">
+		<if test="null!=orderBy and ''!=orderBy">
+			<if test="null==direction or ''==direction">
+				order by ${orderBy} desc
+			</if>
+			<if test="null!=direction and ''!=direction">
+				order by ${orderBy} ${direction}
+			</if>
+		</if>
+	 </if>
+	 <if test="posStart!=null and posStart>=0">
+			limit #{DEF_COUNT} offset #{posStart}
+	 </if>
+	</sql>
+
+
+	<!-- ORACLE 分页 start -->
+	<sql id="oraclePaginationStart">
+    	<![CDATA[
+   			select * from (select row_.*, rownum rownum_ from (
+  		]]>
+	</sql>
+
+	<!-- ORACLE 分页 end -->
+	<sql id="oraclePaginationEnd">
+   	 	<![CDATA[
+   			)row_  ) where rownum_ >= #{startRow} and  rownum_ <= #{endRow}
+  		]]>
+	</sql>
+
+	<!-- sql 执行 -->
+	<sql id="commonExecuteSql">
+		${sql}
+	</sql>
+
+</mapper>

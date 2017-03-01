@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd"
+	updateCheck="false">
+	
+	<diskStore path="java.io.tmpdir" />
+	
+	<defaultCache eternal="false" 
+		maxElementsInMemory="1000"
+		overflowToDisk="false" 
+		diskPersistent="false" 
+		timeToIdleSeconds="0"
+		timeToLiveSeconds="600" 
+		memoryStoreEvictionPolicy="LFU" />
+ 
+    <cache name="invNumCache"
+           maxElementsInMemory="10000"
+           maxElementsOnDisk="10000"
+           eternal="false"
+           overflowToDisk="false"
+           timeToIdleSeconds="120"
+           timeToLiveSeconds="600"
+           memoryStoreEvictionPolicy="LFU"
+      />
+      
+      <cache name="compCache"
+           maxElementsInMemory="10000"
+           maxElementsOnDisk="10000"
+           eternal="false"
+           overflowToDisk="false"
+           timeToIdleSeconds="120"
+           timeToLiveSeconds="600"
+           memoryStoreEvictionPolicy="LFU"
+      />
+      
+      <cache name="depetCache"
+           maxElementsInMemory="10000"
+           maxElementsOnDisk="10000"
+           eternal="false"
+           overflowToDisk="false"
+           timeToIdleSeconds="120"
+           timeToLiveSeconds="600"
+           memoryStoreEvictionPolicy="LFU"
+      />
+      
+      <cache name="groupCache"
+           maxElementsInMemory="10000"
+           maxElementsOnDisk="10000"
+           eternal="false"
+           overflowToDisk="false"
+           timeToIdleSeconds="120"
+           timeToLiveSeconds="600"
+           memoryStoreEvictionPolicy="LFU"
+      />
+      
+      <cache name="ruleCache"
+           maxElementsInMemory="10000"
+           maxElementsOnDisk="10000"
+           eternal="false"
+           overflowToDisk="false"
+           timeToIdleSeconds="120"
+           timeToLiveSeconds="600"
+           memoryStoreEvictionPolicy="LFU"
+      />
+      
+      <cache name="ruleDepetCache"
+           maxElementsInMemory="10000"
+           maxElementsOnDisk="10000"
+           eternal="false"
+           overflowToDisk="false"
+           timeToIdleSeconds="120"
+           timeToLiveSeconds="600"
+           memoryStoreEvictionPolicy="LFU"
+      />
+      
+      <cache name="ruleGroupCache"
+           maxElementsInMemory="10000"
+           maxElementsOnDisk="10000"
+           eternal="false"
+           overflowToDisk="false"
+           timeToIdleSeconds="120"
+           timeToLiveSeconds="600"
+           memoryStoreEvictionPolicy="LFU"
+      />
+            
+      <cache name="masLocCache"
+           maxElementsInMemory="10000"
+           maxElementsOnDisk="10000"
+           eternal="false"
+           overflowToDisk="false"
+           timeToIdleSeconds="120"
+           timeToLiveSeconds="600"
+           memoryStoreEvictionPolicy="LFU"
+      />
+      <cache name="masLocBySelectCache"
+           maxElementsInMemory="10000"
+           maxElementsOnDisk="10000"
+           eternal="false"
+           overflowToDisk="false"
+           timeToIdleSeconds="120"
+           timeToLiveSeconds="600"
+           memoryStoreEvictionPolicy="LFU"
+      />
+      
+</ehcache>

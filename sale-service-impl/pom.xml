@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.hshc.sale</groupId>
+		<artifactId>sale</artifactId>
+		<version>1.0.0.tag</version>
+	</parent>
+	<groupId>com.hshc.sale</groupId>
+	<artifactId>sale-service-impl</artifactId>
+	<version>1.0.0.tag</version>
+	<name>sale Service Impl</name>
+	<dependencies>
+		<dependency>
+			<groupId>com.hshc.sale</groupId>
+			<artifactId>sale-dto</artifactId>
+			<type>jar</type>
+		</dependency>
+		<dependency>
+			<groupId>com.hshc.sale</groupId>
+			<artifactId>sale-entity</artifactId>
+			<type>jar</type>
+		</dependency>
+		<dependency>
+			<groupId>com.hshc.sale</groupId>
+			<artifactId>sale-dao</artifactId>
+			<type>jar</type>
+		</dependency>
+		<dependency>
+			<groupId>com.hshc.sale</groupId>
+			<artifactId>sale-service-api</artifactId>
+			<type>jar</type>
+		</dependency>
+		<dependency>
+			<groupId>com.hshc.upms</groupId>
+			<artifactId>upms-service-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.easymock</groupId>
+			<artifactId>easymock</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<!-- spring dependency -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<!-- EHCACHE begin -->
+		<dependency>
+			<groupId>net.sf.ehcache</groupId>
+			<artifactId>ehcache-core</artifactId>
+		</dependency>
+		<!-- EHCACHE end -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.netflix.rxjava</groupId>
+			<artifactId>rxjava-core</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>2.1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.1.0</version>
+		</dependency>
+		
+	</dependencies>
+</project>

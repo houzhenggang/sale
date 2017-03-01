@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+    PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+
+	<settings>
+		<!-- changes from the defaults -->
+		<setting name="lazyLoadingEnabled" value="false" />
+		<setting name="aggressiveLazyLoading" value="true"/>
+		<setting name="cacheEnabled" value="false" />
+		<setting name="callSettersOnNulls" value="true" />
+	</settings>
+
+	<typeAliases>
+
+		<!-- wh -->
+		<typeAlias alias="backlog" type="com.hshc.sale.entity.wh.WhBacklog" />
+
+		<!-- sale -->
+
+
+	</typeAliases>
+
+	<plugins>
+		<plugin interceptor="com.github.pagehelper.PageHelper">
+			<property name="dialect" value="mysql" />
+			<property name="rowBoundsWithCount" value="true" />
+			<property name="reasonable" value="true" />
+			<property name="returnPageInfo" value="always" />
+		</plugin>
+	</plugins>
+
+	<mappers>
+		<mapper resource="com/hshc/sale/dao/common/common.xml" />
+	</mappers>
+
+</configuration>

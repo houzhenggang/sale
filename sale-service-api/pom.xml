@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.hshc.sale</groupId>
+		<artifactId>sale</artifactId>
+		<version>1.0.0.tag</version>
+	</parent>
+	<groupId>com.hshc.sale</groupId>
+	<artifactId>sale-service-api</artifactId>
+	<version>1.0.0.tag</version>
+	<name>sale Service API</name>
+	<dependencies>
+		<dependency>
+			<groupId>com.hshc.sale</groupId>
+			<artifactId>sale-dto</artifactId>
+			<type>jar</type>
+		</dependency>
+		<dependency>
+			<groupId>com.hshc.sale</groupId>
+			<artifactId>sale-entity</artifactId>
+			<type>jar</type>
+		</dependency>
+		<dependency>
+			<groupId>com.hshc.upms</groupId>
+			<artifactId>upms-service-api</artifactId>
+		</dependency>
+		<!-- EHCACHE begin -->
+		<dependency>
+			<groupId>net.sf.ehcache</groupId>
+			<artifactId>ehcache-core</artifactId>
+		</dependency>
+		<!-- EHCACHE end -->
+		<dependency>
+			<groupId>com.github.jsqlparser</groupId>
+			<artifactId>jsqlparser</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+</project>

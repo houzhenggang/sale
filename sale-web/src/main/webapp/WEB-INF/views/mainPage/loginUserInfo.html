@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+[#include "../include/taglibs.html"/]
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>${sysname}</title>
+[#include "../include/base_js_css.html"/]
+<link rel="stylesheet" type="text/css" href="${ctxpathcss!}/frame-dialog.css">
+<script type="text/javascript" src="${resource!}/js/mainPage/loginUserInfo.js"></script>
+</head>
+<body style="visibility: visible;">
+	<div id="loginUser" class="easyui-window" title="登录用户信息"
+		style="width: 600px; height: 350px;text-align: center">
+		[#if adminUser??]
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	    	<tr>
+				<td width="30%" height="30" align="right">账户：</td>
+				<td height="30"><span style="color: #0078ff;">[#if adminUser.account??] ${adminUser.account} [/#if] </span></td>
+			</tr>
+			<tr>
+				<td width="30%" height="30" align="right">用户名：</td>
+				<td height="30"><span style="color: #0078ff;">[#if adminUser.name??] ${adminUser.name} [/#if] </span></td>
+			</tr>
+		    <tr>
+				<td width="30%" height="30" align="right">性别：</td>
+				<td height="30"><span style="color: #ff8400;">[#if adminUser.sex??] ${adminUser.sex}[/#if]</span>
+				</td>
+			</tr>
+			<tr>
+				<td width="30%" height="30" align="right">电话号码：</td>
+				<td height="30"><span style="color: #00ac41;">[#if adminUser.telephoneNum??] ${adminUser.telephoneNum} [/#if]</span>
+				</td>
+			</tr>
+			<tr>
+				<td width="30%" height="30" align="right">分机号码：</td>
+				<td height="30"><span class="black">[#if adminUser.extension??] ${adminUser.extension} [/#if]</span></td>
+			</tr>
+			<tr>
+				<td width="30%" height="30" align="right">邮箱：</td>
+				<td height="30"><span class="black">[#if adminUser.email??] ${adminUser.email} [/#if]</span></td>
+			</tr>
+			<tr>
+				<td width="30%" height="30" align="right">是否管理员：</td>
+				<td height="30"><span class="black">[#if adminUser.adminFlag??] ${adminUser.adminFlag} [/#if]</span>
+				</td>
+			</tr>
+			<tr>
+				<td width="30%" height="30" align="right">是否有效：</td>
+				<td height="30"><span class="black">[#if adminUser.active??] ${adminUser.active} [/#if]</span></td>
+			</tr> 	
+		</table>
+		[/#if]
+	</div>
+</body>
+</html>

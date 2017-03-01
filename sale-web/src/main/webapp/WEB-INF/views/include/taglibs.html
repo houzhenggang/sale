@@ -1,0 +1,18 @@
+[#assign oscache=JspTaglibs["/WEB-INF/tlds/oscache.tld"]/] 
+[#assign ctxpath=request.contextPath/]
+[#assign ctx="${ctxpath!}/mng"/]
+[#assign easyui="easyui1.3.6"/]
+[#assign themes="gray"/]
+[#assign resource="${ctxpath!}/resource"/]
+[#assign ui_url="${ctxpath!}/common/ui_v2.0"/]
+[#assign sysname="销售管理平台"/]
+<script type="text/javascript">
+    BASE_PATH = "${ctx!}";
+    BASE_IMG_PATH = "${access_root_path!}";
+</script>
+
+<!--分页 标签-->
+[#macro pages url="" pageCount="0" currentPage="1" ]
+<input type="hidden" id="currenPage" name="currenPage" value="1">
+<div id="pagination" class="text-center" url="${url!}" pageCount="${pageCount!}" currentPage="${currentPage!}" ></div>
+[/#macro]
